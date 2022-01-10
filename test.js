@@ -137,7 +137,7 @@
 		clientRectsOffsetComputed,
 		audioDataComputed
 	} = JSON.parse(sessionStorage.getItem(sessionName))
-	const sessionProtection = `uBlock Origin ABF Session: ${hash} @${timestamp}`
+	const sessionProtection = `uBlock Origin TEST Session: ${hash} @${timestamp}`
 	console.log(sessionProtection)
 	// webgl
 	function computeGetParameter(type) {
