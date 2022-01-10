@@ -550,7 +550,7 @@
 					console.groupEnd()
 				}
 				const message = (confirmPermission, [url, session, reads]) => {
-					return '🤮 Fingerprinting detected! Haha'
+					return '🤮 Fingerprinting detected!'
 					+ (confirmPermission ? ' OK to allow or Cancel to abort\n' : '\n')
 					+ '🛡 ' + session + '\n'
 					+ '💩 Creepy script: ' + url + '\n'
@@ -561,11 +561,9 @@
 					const creepyOrigin = sessionStorage.getItem(sessionName + 'creepyOrigin')
 					if (unknown && !creepyOrigin) {
 						sessionStorage.setItem(sessionName + 'creepyOrigin', true)
-						const { origin } = location
-						alert(message(false, [origin, sessionProtection, readsFormatted]))
 					}
 					else if (!unknown) {
-						permission = confirm(message(true, [url, sessionProtection, readsFormatted]))
+						//permission = confirm(message(true, [url, sessionProtection, readsFormatted]))
 					} 
 					if (permission) {
 						sessionStorage.setItem(sessionName + 'permit', 'allow')
