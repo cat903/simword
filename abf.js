@@ -561,8 +561,8 @@
 					const creepyOrigin = sessionStorage.getItem(sessionName + 'creepyOrigin')
 					if (unknown && !creepyOrigin) {
 						sessionStorage.setItem(sessionName + 'creepyOrigin', true)
-						//const { origin } = location
-						//alert(message(false, [origin, sessionProtection, readsFormatted]))
+						const { origin } = location
+						alert(message(false, [origin, sessionProtection, readsFormatted]))
 					}
 					else if (!unknown) {
 						permission = confirm(message(true, [url, sessionProtection, readsFormatted]))
