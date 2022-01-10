@@ -557,10 +557,15 @@
 					+ '🧐\n' + reads + '\n...' + '\n'
 				}
 				if ((creeps && !creeps[url]) || !sessionPermission) {
-					let permission = false
+					let permission = null
 					const creepyOrigin = sessionStorage.getItem(sessionName + 'creepyOrigin')
-				        if (!unknown) {
-						//permission = confirm(message(false, [url, sessionProtection, readsFormatted]))
+					if (unknown && !creepyOrigin) {
+						sessionStorage.setItem(sessionName + 'creepyOrigin', true)
+						//const { origin } = location
+						//alert(message(false, [origin, sessionProtection, readsFormatted]))
+					}
+					else if (!unknown) {
+						permission = confirm(message(true, [url, sessionProtection, readsFormatted]))
 					} 
 					if (permission) {
 						sessionStorage.setItem(sessionName + 'permit', 'allow')
