@@ -564,6 +564,7 @@
 					}
 					else if (!unknown) {
 						permission = false;
+						console.log('ABF-SET X')
 					} 
 					if (permission) {
 						sessionStorage.setItem(sessionName + 'permit', 'allow')
