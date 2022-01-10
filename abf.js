@@ -563,7 +563,7 @@
 						sessionStorage.setItem(sessionName + 'creepyOrigin', true)
 					}
 					else if (!unknown) {
-						//permission = confirm(message(true, [url, sessionProtection, readsFormatted]))
+						permission = false;
 					} 
 					if (permission) {
 						sessionStorage.setItem(sessionName + 'permit', 'allow')
