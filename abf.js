@@ -550,7 +550,7 @@
 					console.groupEnd()
 				}
 				const message = (confirmPermission, [url, session, reads]) => {
-					return '🤮 Fingerprinting detected!'
+					return '🤮 Fingerprinting detected! Haha'
 					+ (confirmPermission ? ' OK to allow or Cancel to abort\n' : '\n')
 					+ '🛡 ' + session + '\n'
 					+ '💩 Creepy script: ' + url + '\n'
