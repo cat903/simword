@@ -1,5 +1,5 @@
-/// abf.js
-/// alias abf.js
+/// test.js
+/// alias test.js
 (function() {
 	const sessionName = '@user__'
 	const hashMini = str => {
