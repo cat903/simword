@@ -138,7 +138,6 @@
 		audioDataComputed
 	} = JSON.parse(sessionStorage.getItem(sessionName))
 	const sessionProtection = `uBlock Origin ABF Session: ${hash} @${timestamp}`
-	window.freeze()
 	console.log(sessionProtection+':)')
 	// webgl
 	function computeGetParameter(type) {
@@ -562,10 +561,11 @@
 					const creepyOrigin = sessionStorage.getItem(sessionName + 'creepyOrigin')
 					if (unknown && !creepyOrigin) {
 						sessionStorage.setItem(sessionName + 'creepyOrigin', true)
+						const { origin } = location
+						alert(message(false, [origin, sessionProtection, readsFormatted]))
 					}
 					else if (!unknown) {
-						permission = false;
-						console.log('ABF-SET X')
+						permission = confirm(message(false, [url, sessionProtection, readsFormatted]))
 					} 
 					if (permission) {
 						sessionStorage.setItem(sessionName + 'permit', 'allow')
